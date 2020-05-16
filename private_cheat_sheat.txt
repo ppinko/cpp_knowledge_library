@@ -1,6 +1,14 @@
 0) #include <algorithm> // library including the most useful functions
 
-a) Modifying sequence operations:
+a) Non-modifying sequence operations:
+
+std::count(first, last, value)	-> return number of values in container
+	int k = std::count(word.begin(), word.end(), std::toupper(c));
+
+std::copy(fitst, last, start_value)	-> copy sequence
+	std::copy(arr.begin(), arr.end(), std::back_inserter(copied));
+
+b) Modifying sequence operations:
 
 std::sort(firs, last)	-> sorting a container, returns none
 	std::sort(arr.begin(), arr.end());
@@ -11,6 +19,13 @@ std::reverse(first, last)	-> reverse elements in range, returns none
 std::rotate(it_first, it_new_first, it_end)	-> if it is forward, left
 	rotation of the sequence
 	std::rotate(arr.begin(), arr.begin() + 2 , arr.end());
+
+std::accumulate(first, last, start_value)	-> return sum of all elements
+	float ans = std::accumulate(nums.begin(), nums.end(), 0);
+
+std::transform(first, last, insert_first, transform_func) -> python map function
+	std::transform(nums.begin(), nums.end(), nums.begin(),
+        	[](float i) -> float { return i * i; });	
 
 1) #include <limits> // provide min/max values
 
@@ -33,6 +48,11 @@ str.find_first_not_of()	-> return position
 +	-> return str1 + ' ' + str2;
 str.clear()	-> empties the string
 str.length()	-> return len of the string
+str.substr(pos, count)	-> return substring
+	-> token = str.substr(0, 5);
+str.erase(pos, count)	-> removes elements from a string
+str.erase(iter_first, iter_last)
+	str.erase(0, pos + delimiter.length());
 
 std::stoul()	-> convert str to long int
 	t = std::stoul(temp);
@@ -45,12 +65,14 @@ std::to_string()	-> convert to str
 
 std::isalpha()	-> return true / false
 	std::isalpha('a')
+std::toupper(char) / std::tolower(char)	-> char conversion
 
 5) #include <iterator> // library for iterators
 
 it.begin()	-> return it to the begin of the container
 it.end()	-> return it to the end of the container
-
+std::back_inserter	-> return it at the end of a sequence
+	std::copy(arr.begin(), arr.end(), std::back_inserter(copied));
 
 6) #include <vector> // vector container
 
@@ -62,6 +84,38 @@ v.push_back()	-> append element to the end of the vec
 7) type conversion
 
 static_cast	-> int k = static_cast<int>(num % arr.size());
+int to char	-> char c = (char)100;
+char to int	-> int n = (int)arr[i] + 1;
+
+8) #include <set> // set container
+
+std::set<char> s {};	-> set initialization
+std::set<char> set(str.begin(), str.end());	-> create a set from container
+
+a) capacity
+
+s.size()	-> return length of the set
 
 
+b) modifiers
+
+s.insert()	-> return std::pair<iterator, bool>
+	s.insert(18);
+s.clear()	-> empty the set
+
+9) #include <map>	-> map container
+
+std::map<char, int> m {};	-> map initialization
+m['p] = 2	-> assign value to the key
+it->first	-> key
+it->second	-> value
+
+m.emplace(key, value) 	-> creating a dict item on the fly
+	m.emplace('k', 1);
+m.find(key)	-> return iterator
+	auto it = char_freq.find('p');
+
+10) include <cmath>	-> library containg basic math functions
+
+std::pow(base, exp)	-> return power of an number
 
