@@ -1,3 +1,17 @@
+0) #include <algorithm> // library including the most useful functions
+
+a) Modifying sequence operations:
+
+std::sort(firs, last)	-> sorting a container, returns none
+	std::sort(arr.begin(), arr.end());
+
+std::reverse(first, last)	-> reverse elements in range, returns none
+	std::reverse(temp.begin(), temp.end()); 
+
+std::rotate(it_first, it_new_first, it_end)	-> if it is forward, left
+	rotation of the sequence
+	std::rotate(arr.begin(), arr.begin() + 2 , arr.end());
+
 1) #include <limits> // provide min/max values
 
 int min = std::numeric_limits<int>::max();
@@ -9,6 +23,13 @@ auto ss = std::istringstream(str);
 
 3) #include <string> // string container
 
+str.front()	-> return first element of the string
+str.back()	-> return last element of the string
+	if (str.front() == str.back())
+std::string::npos	-> special value representing max len of str
+str.find_first_not_of()	-> return position 
+	if(str.find_first_not_of(str.at(0)) == std::string::npos)
+
 +	-> return str1 + ' ' + str2;
 str.clear()	-> empties the string
 str.length()	-> return len of the string
@@ -17,6 +38,8 @@ std::stoul()	-> convert str to long int
 	t = std::stoul(temp);
 std::to_string()	-> convert to str
 	return std::to_string(max) + ' ' + std::to_string(min);
+
+
 
 4) #include <cctype> // library for char evaluation
 
@@ -27,3 +50,18 @@ std::isalpha()	-> return true / false
 
 it.begin()	-> return it to the begin of the container
 it.end()	-> return it to the end of the container
+
+
+6) #include <vector> // vector container
+
+v.size()	-> return size of the vec
+	int v_size = v.size();
+v.push_back()	-> append element to the end of the vec
+	ans.push_back(i);
+
+7) type conversion
+
+static_cast	-> int k = static_cast<int>(num % arr.size());
+
+
+
