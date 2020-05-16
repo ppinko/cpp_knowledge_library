@@ -1,0 +1,29 @@
+1) #include <limits> // provide min/max values
+
+int min = std::numeric_limits<int>::max();
+int max = std::numeric_limits<int>::min();
+
+2) #include <sstream> // library of stringstream
+
+auto ss = std::istringstream(str);
+
+3) #include <string> // string container
+
++	-> return str1 + ' ' + str2;
+str.clear()	-> empties the string
+str.length()	-> return len of the string
+
+std::stoul()	-> convert str to long int
+	t = std::stoul(temp);
+std::to_string()	-> convert to str
+	return std::to_string(max) + ' ' + std::to_string(min);
+
+4) #include <cctype> // library for char evaluation
+
+std::isalpha()	-> return true / false
+	std::isalpha('a')
+
+5) #include <iterator> // library for iterators
+
+it.begin()	-> return it to the begin of the container
+it.end()	-> return it to the end of the container
