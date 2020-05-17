@@ -45,9 +45,11 @@ str.back()	-> return last element of the string
 std::string::npos	-> special value representing max len of str
 str.find_first_not_of()	-> return position 
 	if(str.find_first_not_of(str.at(0)) == std::string::npos)
+str.find_last_of()		-> return position
 
 +	-> return str1 + ' ' + str2;
 str.clear()	-> empties the string
+str.empty()	-> return true / false
 str.length()	-> return len of the string
 str.substr(pos, count)	-> return substring
 	-> token = str.substr(0, 5);
