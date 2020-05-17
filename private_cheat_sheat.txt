@@ -5,12 +5,12 @@ a) Non-modifying sequence operations:
 std::count(first, last, value)	-> return number of values in container
 	int k = std::count(word.begin(), word.end(), std::toupper(c));
 
-std::copy(fitst, last, start_value)	-> copy sequence
+std::copy(first, last, start_value)	-> copy sequence
 	std::copy(arr.begin(), arr.end(), std::back_inserter(copied));
 
 b) Modifying sequence operations:
 
-std::sort(firs, last)	-> sorting a container, returns none
+std::sort(first, last)	-> sorting a container, returns none
 	std::sort(arr.begin(), arr.end());
 
 std::reverse(first, last)	-> reverse elements in range, returns none
@@ -38,6 +38,7 @@ auto ss = std::istringstream(str);
 
 3) #include <string> // string container
 
+str.at(pos)	-> accessing an item from a string
 str.front()	-> return first element of the string
 str.back()	-> return last element of the string
 	if (str.front() == str.back())
@@ -66,6 +67,7 @@ std::to_string()	-> convert to str
 std::isalpha()	-> return true / false
 	std::isalpha('a')
 std::toupper(char) / std::tolower(char)	-> char conversion
+std::islower(char) / std::isupper(char)	-> validations
 
 5) #include <iterator> // library for iterators
 
@@ -90,12 +92,13 @@ char to int	-> int n = (int)arr[i] + 1;
 8) #include <set> // set container
 
 std::set<char> s {};	-> set initialization
-std::set<char> set(str.begin(), str.end());	-> create a set from container
+std::set<char> s(str.begin(), str.end());	-> create a set from container
 
 a) capacity
 
 s.size()	-> return length of the set
-
+s.count()	-> return number of elements in the set
+	if (s.count('k') == 0)
 
 b) modifiers
 
