@@ -56,6 +56,8 @@ str.substr(pos, count)	-> return substring
 str.erase(pos, count)	-> removes elements from a string
 str.erase(iter_first, iter_last)
 	str.erase(0, pos + delimiter.length());
+str.insert(it_start, element)	-> insert element into a string
+	common_ending.insert(common_ending.begin(), *it1);
 
 std::stoul()	-> convert str to long int
 	t = std::stoul(temp);
@@ -75,6 +77,7 @@ std::islower(char) / std::isupper(char)	-> validations
 
 it.begin()	-> return it to the begin of the container
 it.end()	-> return it to the end of the container
+it.rbegin()	-> return reverse iterator
 std::back_inserter	-> return it at the end of a sequence
 	std::copy(arr.begin(), arr.end(), std::back_inserter(copied));
 
@@ -121,6 +124,9 @@ m.find(key)	-> return iterator
 	auto it = char_freq.find('p');
 
 10) include <cmath>	-> library containg basic math functions
+
+std::ceil(float arg)	-> return an int not lower than arg
+
 
 std::pow(base, exp)	-> return power of an number
 
