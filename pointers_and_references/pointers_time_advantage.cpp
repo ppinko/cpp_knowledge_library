@@ -4,17 +4,18 @@
 
 int main(){
     clock_t start, stop;
+    clock_t start2, stop2;
     int n = 10000000;
     
     
     // int table [n];
-    // start = clock();
+    // start2 = clock();
     // for (int i {0}; i < n; i++){
     //     table[i] = i;
     //     table[i] -= 5;
     // }
-    // stop = clock();
-    // double time1 = (double)(stop - start) / CLOCKS_PER_SEC;
+    // stop2 = clock();
+    // double time1 = (double)(stop2 - start2) / CLOCKS_PER_SEC;
     // std::cout << "Time for normal array = " << time1 << std::endl;
 
     
