@@ -9,3 +9,9 @@ int main()
 return 0;
 }
 
+int multiply(int a, int b=2)
+{
+    int r;
+    r = a * b;
+    return r;
+} 

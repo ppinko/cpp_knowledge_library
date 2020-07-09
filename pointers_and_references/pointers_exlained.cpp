@@ -55,7 +55,7 @@ int main(){
         if (j != 2)
             ptr_arr3++;
         else
-            ptr_arr3 = ptr_arr3 - 2;    // returning pointer to initial position, need to delete it
+            ptr_arr3 = ptr_arr3 - 2;    // returning pointer to initial position
     }
     std::cout << std::endl;
     delete [] ptr_arr3;
