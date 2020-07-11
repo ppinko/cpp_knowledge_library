@@ -47,5 +47,8 @@ int main(){
     std::cout << "First element: " << pair_results.first
         << ", Second element: " << pair_results.second << std::endl;    
 
+	std::tuple<int, float, std::string> tuple_test {1, 0.5, "test"};
+	std::cout << std::get<1>(tuple_test) << std::endl;	
+
     return 0;
 }
