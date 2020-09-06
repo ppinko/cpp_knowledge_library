@@ -7,6 +7,13 @@ an error is thrown - "reference to name is ambiguous".
 This mechanism helps from unexpected overwriting.
 
 C++ does a great job at preventing random function change.
+
+A couple of namespace's properties:
+- Namespace declarations appear only at global scope.
+- Namespace declarations can be nested within another namespace.
+- Namespace declarations don’t have access specifiers. (Public or private)
+- No need to give semicolon after the closing brace of definition of namespace.
+- We can split the definition of namespace over several units.
 */
 
 #include <iostream>
