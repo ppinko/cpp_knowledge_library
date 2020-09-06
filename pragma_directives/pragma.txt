@@ -1,0 +1,14 @@
+Pragma directive is a special purpose directive and is used to 
+turn on or off some features. This type of directives are 
+compiler-specific i.e., they vary from compiler to compiler. 
+
+One of the most useful directive is:
+#pragma once 
+/*
+The #pragma once directive has a very simple concept. The header 
+file containing this directive is included only once even if the 
+programmer includes it multiple times during a compilation. This 
+is not included in any ISO C++ standard. This directive works 
+similar to the #include guard idiom. Use of #pragma once saves 
+the program from multiple inclusion optimisation. 
+*/
