@@ -1,0 +1,9 @@
+source - https://www.howtoinstall.me/ubuntu/18-04/libmsgsl-dev/
+
+How to Install Microsoft Guidelines Support Library in 
+Ubuntu 20.04
+
+It is required to install libmsgsl-dev:
+
+sudo apt update
+sudo apt install libmsgsl-dev
