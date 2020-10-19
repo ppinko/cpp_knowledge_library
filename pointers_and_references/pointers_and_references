@@ -94,7 +94,11 @@ Declaration:
     	cout << ref << endl;    // 100
     	cout << &ref << endl;   // 0x7ffc... - address
 
-Passing references to a function:
+
+Passing references to a function should be used only with small functions as they are directly
+copied to main stack like monolith programming style. It's not suitable for complex functions.
+
+Passing references to a function - example:
 	int square(int &n) {
 		return n*n;
 	}
