@@ -1,0 +1,12 @@
+Template function and class declarations should be included in header file (.h),
+but definition should be place in a separate file (.hpp).
+
+Important!!!
+At the end on header file, before #endif clause closing defintion of header file
+the .hpp file should be included:
+#include "templateDefinition.hpp"
+
+Template specializations must be defined in the same namespace that contains the
+original template. As with any other namespace name, so long as we have declared 
+the specialization inside the namespace, we can define it outside the namespace.
+
