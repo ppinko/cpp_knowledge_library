@@ -1,0 +1,12 @@
+We can prevent the use of a constructor in a context that requires an implicit 
+conversion by declaring the constructor as 'explicit'. Now, neither constructor 
+can be used to implicitly create an object of the class with 'explicit'
+constructor.
+
+The 'explicit' keyword is meaningful only on constructors that can be called 
+with a single argument. Constructors that require more arguments are not used to
+perform an implicit conversion, so there is no need to designate such
+constructors as explicit. The explicit keyword is used only on the constructor
+declaration inside the class. It is not repeated on a definition made outside
+the class body.
+
